@@ -1,1 +1,1 @@
-web: python scheduler.py
+web: python health_server.py
