@@ -6,7 +6,7 @@ import os
 import threading
 import time
 from flask import Flask, jsonify
-from scheduler import DomainScheduler
+from scheduler import DropScheduler
 
 # Create Flask app
 app = Flask(__name__)
@@ -36,7 +36,7 @@ def start_scheduler():
     """Start the domain scheduler in a separate thread"""
     global scheduler
     try:
-        scheduler = DomainScheduler()
+        scheduler = DropScheduler()
         scheduler.start_monitoring()
     except Exception as e:
         print(f"Scheduler error: {e}")
