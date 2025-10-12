@@ -5,8 +5,8 @@ from datetime import timedelta
 try:
     from dotenv import load_dotenv
     load_dotenv()
-except ImportError:
-    pass  # python-dotenv not available, use system environment variables
+except (ImportError, UnicodeDecodeError, FileNotFoundError):
+    pass  # python-dotenv not available or .env file has issues, use system environment variables
 
 # Beginner Combo Configuration
 # Free WHOIS monitoring + Porkbun registration + Discord notifications
