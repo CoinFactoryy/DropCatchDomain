@@ -1,0 +1,18 @@
+[Unit]
+Description=Domain Catcher Service
+After=network.target
+
+[Service]
+Type=simple
+User=domaincatcher
+Group=domaincatcher
+WorkingDirectory=/home/domaincatcher/DropCatchDomain
+Environment=PATH=/home/domaincatcher/DropCatchDomain/venv/bin
+ExecStart=/home/domaincatcher/DropCatchDomain/venv/bin/python health_server.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
