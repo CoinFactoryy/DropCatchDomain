@@ -6,7 +6,7 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: python health_server.py
     envVars:
-      - key: DYNADOT_API_KEY
+      - key: 7k7C7n7aY8Ot7P8D838c8X9O9E6uB7S7Ip8j8R7u6i8F
         sync: false
       - key: PORKBUN_API_KEY
         sync: false
